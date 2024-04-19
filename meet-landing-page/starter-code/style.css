@@ -4,6 +4,7 @@
     box-sizing: border-box;
     background-color: #FAFAFA;
     font-family: "Red Hat Display";
+
 }
 .logo{
     margin-top: 80px;
@@ -92,10 +93,9 @@ button span{
 /* MAIN SECTION */
 .main{
     text-align: center;
-}
-.page-1{
-    /* background-color: green; */
     margin-top: 80px;
+}
+.page{
     display: flex;
     justify-content: center;
     position: relative;
@@ -175,51 +175,37 @@ button span{
 
 /* FOOTER */
 .footer{
-    margin-top: 250px;
-    height: 300px;
+    margin-top: 15em;
     width: 100%;
-    background: url(assets/desktop/image-footer.jpg);
-    background-size: contain;
-    background-position: center;
+    background-image:linear-gradient(to  right bottom, 
+    rgba(77, 150, 169, 0.75), rgba(77, 150, 169, 0.5)), 
+    url(./assets/desktop/image-footer.jpg);
+    height: 45vh;
     position: relative;
-    /* margin-bottom: 200px; */
-    z-index: 10;
 }
-.footer::before{
-    content: '';
-    display: inline-block;
-    background-color: rgba(77, 150, 169, 0.75);
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.footer .page-2{
+.footer .page{
+    background-color: transparent;
     position: absolute;
     left: 50%;
-    top: -70%;
-    z-index: 20;
-    background-color: inherit;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
 }
 .footer .content{
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-content: center; 
 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: #FAFAFA;
-    background-color: inherit;
+    background-color: transparent;
 }
 .footer h3{
-    /* color: #FAFAFA; */
-    background-color: inherit;
-    /* color: #000; */
+    background-color: transparent;
     font-size: 40px;
     font-style: normal;
     font-weight: 900;
@@ -277,29 +263,25 @@ button span{
         content: none;
     }
     .footer{
-        background: url(assets/tablet/image-footer.jpg);
-        height: 60vh;
-        width: 100vw;
-        
-        background-size: contain;
-        background-position: center;
-        position: relative;
+        background-image:linear-gradient(to  right bottom, 
+        rgba(77, 150, 169, 0.75), rgba(77, 150, 169, 0.5)), 
+        url(./assets/tablet/image-footer.jpg);
+        height: 30vh;
+        width: 100%;
     }
     .footer .page-2{
+        background-color: transparent;
         position: absolute;
-        left: 50%;
-        top: -50%;
-        z-index: 20;
-        background-color: inherit;
+        /* left: 50%; */
+        bottom: 95%;
+        transform: translate(-50%);
+        background-color: transparent;
     }
     .footer .content{
+        height: 80%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-content: space-around;
-
-        width: 50%;
-        margin: 0 auto;
+        justify-content: space-around;
         text-align: center;
     }
     .footer .content h3{
@@ -324,7 +306,7 @@ button span{
         margin-top: 20px;
         margin-bottom: 40px;
         width: 100%;
-
+        background-color: transparent;
     }
 
     .footer .content button {
@@ -391,14 +373,20 @@ button span{
         line-height: 36px;
     }
     .footer{
-        background: url(assets/mobile/image-footer.jpg);
-        height: 60vh;
-        width: 100vw;
+        background-image:linear-gradient(to  right bottom, 
+        rgba(77, 150, 169, 0.75), rgba(77, 150, 169, 0.5)), 
+        url(./assets/mobile/image-footer.jpg);
+        height: 45vh;
         position: relative;
+        width: 100%;
 
         background-size: contain;
         background-position: center;
         position: relative;
+    }
+    .footer .page-2{
+        position: absolute;
+        bottom: 65%;
     }
     .footer .content{
         display: flex;
@@ -406,7 +394,7 @@ button span{
         justify-content: center;
         align-content: space-around;
 
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
         text-align: center;
     }
@@ -431,9 +419,5 @@ button span{
         line-height: 26px;
         margin: 0 auto;
     }
-    .footer .page-2{
-        position: absolute;
-        top: -42%;
-        left: 45%;
-    }
+    
 }
